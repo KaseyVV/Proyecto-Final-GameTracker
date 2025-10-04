@@ -22,4 +22,36 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  try {
+    const juegoActualizado = await Juego.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!juegoActualizado) {
+      return res.status(404).json({ error: "Juego no encontrado" });
+    }
+
+    res.json(juegoActualizado);
+  } catch (err) {
+    res.status(400).json({ error: "Error al actualizar el juego", detalle: err.message });
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const juegoEliminado = await Juego.findByIdAndDelete(req.params.id);
+
+    if (!juegoEliminado) {
+      return res.status(404).json({ error: "Juego no encontrado" });
+    }
+
+    res.json({ mensaje: "Juego eliminado correctamente", juego: juegoEliminado });
+  } catch (err) {
+    res.status(400).json({ error: "Error al eliminar el juego", detalle: err.message });
+  }
+});
+
 module.exports = router;

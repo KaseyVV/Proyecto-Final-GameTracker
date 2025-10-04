@@ -9,11 +9,11 @@ const JuegoSchema = new mongoose.Schema({
   genero: {
     type: String,
     required: false
-  },           // "Acción", "RPG", "Estrategia", etc.
+  },          
   plataforma: {
     type: String,
     required: true
-  },       // "PC", "PlayStation", "Xbox", etc.
+  },  
   añoLanzamiento: {
     type: Number,
     required: true,
@@ -26,8 +26,9 @@ const JuegoSchema = new mongoose.Schema({
   },
   imagenPortada: {
     type: String,
-    required: false
-  },    // URL de la imagen
+    required: false,
+    trim: true
+  }, 
   descripcion: {
     type: String,
     required: false
