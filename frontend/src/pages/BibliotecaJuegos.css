@@ -1,13 +1,46 @@
-.biblioteca-container {
-  padding: 30px;
-  background-color: #101820;
-  color: white;
+.biblioteca {
+  padding: 40px;
+  background-color: #0f1115;
+  color: #eaeaea;
   min-height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 
-.juegos-grid {
+.biblioteca-header {
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.biblioteca-header h2 {
+  font-size: 1.8rem;
+  color: #00aaff;
+}
+
+.btn-agregar {
+  background-color: #00aaff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-agregar:hover {
+  background-color: #008ecc;
+}
+
+.biblioteca-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 25px;
-  margin-top: 20px;
+}
+
+.biblioteca-vacia {
+  text-align: center;
+  color: #9ea7ad;
+  margin-top: 50px;
 }
