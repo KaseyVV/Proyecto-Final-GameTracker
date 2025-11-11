@@ -33,6 +33,16 @@
   background-color: #008ecc;
 }
 
+.contenedor-juegos {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 400px;
+  background: #181922;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
 .biblioteca-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -43,4 +53,13 @@
   text-align: center;
   color: #9ea7ad;
   margin-top: 50px;
+}
+
+.estado-error {
+  text-align: center;
+  background: #2a2b3d;
+  color: #ff6b6b;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
 }
